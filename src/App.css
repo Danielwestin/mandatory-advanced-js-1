@@ -1,6 +1,5 @@
 body{
   margin: 0;
-  background-color: #565555;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -22,7 +21,8 @@ body{
   border-radius: 10px;
   width: 620px;
   height: 570px;
-  background-color: #1db954;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, #FAFFD1, #A1FFCE 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,8 @@ body{
   font-size: 30px;
   font-family: "helvetica Neue";
   font-weight: 100;
+  border: solid 1px black;
+  box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.75);
 }
 
 .usernameText{
@@ -43,38 +45,91 @@ body{
 }
 
 .usernameText::placeholder{
-  color: white;
+  color: black;
+  opacity: 0.5;
   font-size: 15px;
 }
 
-
-
-
-
-.chat{
-  border-radius: 10px;
+.content{
   width: 620px;
   height: 570px;
-  background-color: #1db954;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.75);
+}
+
+
+
+.chat{
+  width: 620px;
+  height: 100px;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, #FAFFD1, #A1FFCE 100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
 }
 
 .dialogBox{
-  width: 605px;
-  height: 480px;
-  background-color: lightgray;
-  border-radius: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
+  width: 620px;
+  height: 450px;
+  background-color: white;
+  overflow: scroll;
+  border-bottom: solid 1px lightgray;
+}
+
+.dialogBox li{
+  list-style: none;
 }
 
 .typeArea{
-  width: 600px;
+  width: 580px;
   height: 30px;
-  border-radius: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  background: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 20px;
+  font-size: 15px;
+}
+
+.typeArea::placeholder{
+  color: black;
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+.ChatContent{
+  padding-left: 10px;
+  font-family: "helvetica Neue";
+  font-weight: 100;
+}
+
+.logoutButton{
+  font-family: "helvetica Neue";
+  font-weight: 100;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 350px;
+  font-size: 60px;
+  color: #black;
+  text-shadow: 2px 2px 0px #A1FFCE;
+}
+.logoutButton:hover{
+    color: #ff9898;
+}
+.logoutButton:active{
+  color: #9898ff;
 }
