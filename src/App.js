@@ -29,9 +29,11 @@ class App extends React.Component {
     } else {
       el = <Login onSubmit={this.onSubmit}/>
     }
-    return <div>
-      {el}
-    </div>
+    return(
+      <div>
+        {el}
+      </div>
+  )
   }
 }
 export default App;

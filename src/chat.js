@@ -52,6 +52,7 @@ class Chat extends React.Component {
         username: this.props.username,
         content: this.state.myMessage
       }, (response => {
+        console.log(response.data);
         this.newMessage(response.data.newMessage)
       }));
   } else {
